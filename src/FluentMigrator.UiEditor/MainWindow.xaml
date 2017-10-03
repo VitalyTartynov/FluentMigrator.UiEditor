@@ -8,6 +8,8 @@
     Title="FluentMigrationsEditor"
     Width="525"
     Height="350"
+    MinWidth="400"
+    MinHeight="300"
     mc:Ignorable="d">
     <Window.DataContext>
         <local:MainWindowVm />
@@ -25,14 +27,29 @@
                 <MenuItem Command="{Binding Path=QuitCommand}" Header="Quit" />
             </MenuItem>
         </Menu>
-        <avalonEdit:TextEditor
-            xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
-            Name="textEditor"
-            Grid.Row="1"
-            FontFamily="Consolas"
-            FontSize="10pt"
-            HorizontalScrollBarVisibility="Auto"
-            SyntaxHighlighting="C#"
-            VerticalScrollBarVisibility="Auto" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <avalonEdit:TextEditor
+                xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+                Name="textEditor"
+                Grid.Row="1"
+                FontFamily="Consolas"
+                FontSize="10pt"
+                HorizontalScrollBarVisibility="Auto"
+                SyntaxHighlighting="C#"
+                Text="Тут будет текст выбранной миграции"
+                VerticalScrollBarVisibility="Auto" />
+            <ListBox
+                Name="MigrationsList"
+                Grid.Column="1"
+                Width="150">
+                <ListBoxItem Content="Миграция 1" />
+                <ListBoxItem Content="Миграция 2" />
+                <ListBoxItem Content="Миграция 3" />
+            </ListBox>
+        </Grid>
     </Grid>
 </Window>
