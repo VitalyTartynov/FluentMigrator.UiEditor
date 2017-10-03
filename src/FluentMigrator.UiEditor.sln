@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentMigrator.UiEditor", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentMigrator.UiEditor.Tests", "FluentMigrator.UiEditor.Tests\FluentMigrator.UiEditor.Tests.csproj", "{35073875-AF49-4F69-AD3F-6B9380B20542}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibraryWithMigrations", "TestLibraryWithMigrations\TestLibraryWithMigrations.csproj", "{64834B55-8A82-45EA-8E2D-82091DCBD158}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{35073875-AF49-4F69-AD3F-6B9380B20542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35073875-AF49-4F69-AD3F-6B9380B20542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35073875-AF49-4F69-AD3F-6B9380B20542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64834B55-8A82-45EA-8E2D-82091DCBD158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64834B55-8A82-45EA-8E2D-82091DCBD158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64834B55-8A82-45EA-8E2D-82091DCBD158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64834B55-8A82-45EA-8E2D-82091DCBD158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
