@@ -9,12 +9,30 @@
     Width="525"
     Height="350"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <local:MainWindowVm />
+    </Window.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Command="{Binding Path=OpenCommand}" Header="Open" />
+                <MenuItem Command="{Binding Path=SaveCommand}" Header="Save" />
+                <MenuItem Command="{Binding Path=QuitCommand}" Header="Quit" />
+            </MenuItem>
+        </Menu>
         <avalonEdit:TextEditor
             xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
             Name="textEditor"
+            Grid.Row="1"
             FontFamily="Consolas"
             FontSize="10pt"
-            SyntaxHighlighting="C#" />
+            HorizontalScrollBarVisibility="Auto"
+            SyntaxHighlighting="C#"
+            VerticalScrollBarVisibility="Auto" />
     </Grid>
 </Window>
